@@ -1,0 +1,30 @@
+{
+  "name": "wpsmith/schema",
+  "description": "WordPress schema.",
+  "keywords": [
+    "wordpress",
+    "widgets"
+  ],
+  "homepage": "https://github.com/wpsmith/Schema",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Travis Smith",
+      "email": "t@wpsmith.net",
+      "homepage": "http://wpsmith.net/",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/wpsmith/Schema/issues"
+  },
+  "require": {
+    "php": ">=5.2.4",
+    "wpsmith/singleton": "0.0.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "WPS\\Schema\\": "src/"
+    }
+  }
+}
