@@ -1,26 +1,35 @@
 <?php
 
-class JsonLD {
-	public function __construct() {
-	}
+namespace WPS\WP\Schema;
 
-	public function do() {
-		echo '<script type="application/ld+json">';
-		echo '</script>';
-	}
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
-	protected function get_data() {
-		return array(
-			'@context'  => 'http://schema.org',
-			'@type'     => 'Organization',
-			'address'   => array(
-				'@type'           => 'PostalAddress',
-				'addressLocality' => '',
-				'postalCode'      => '',
-				'streetAddress'   => '',
-			),
-			'name'      => '',
-			'telephone' => '',
-		);
+if ( ! class_exists( __NAMESPACE__ . '\JsonLD' ) ) {
+	class JsonLD {
+		public function __construct() {
+		}
+
+		public function do() {
+			echo '<script type="application/ld+json">';
+			echo '</script>';
+		}
+
+		protected function get_data() {
+			return array(
+				'@context'  => 'http://schema.org',
+				'@type'     => 'Organization',
+				'address'   => array(
+					'@type'           => 'PostalAddress',
+					'addressLocality' => '',
+					'postalCode'      => '',
+					'streetAddress'   => '',
+				),
+				'name'      => '',
+				'telephone' => '',
+			);
+		}
 	}
 }
